@@ -10,6 +10,9 @@ eventListeners();
 function eventListeners() {
     //Cuando se envia el formulario
     document.querySelector('#formulario').addEventListener('submit', agregarTweet);
+
+    //Borrar tweets
+    listaTweets.addEventListener('click', borrarTweet);
 }
 
 
@@ -34,5 +37,39 @@ function agregarTweet(e) {
     //Añade el tweet a la lista
     listaTweets.appendChild(li);
 
-    console.log(tweet);
+    //Añadir a Local Storage
+    agregarTweetLocalStorage(tweet);
+}
+
+//Elimina tweet del DOM
+function borrarTweet(e) {
+    e.preventDefault();
+
+    if (e.target.className === 'borrar-tweet') {
+        console.log(e.target.parentElement.remove());
+    }
+
+}
+
+//Agregar tweet a Local Storage
+function agregarTweetLocalStorage(tweet) {
+    let tweets;
+
+    tweets = obtenerTweetsLocalStorage();
+    console.log(tweets);
+    tweets.push(tweet);
+    localStorage.setItem('tweets', JSON.stringify(tweets));
+}
+
+//Obtener los tweets de LocalStorage
+function obtenerTweetsLocalStorage() {
+    let tweets;
+
+    if (localStorage.getItem('tweets') === null) {
+        tweets = [];
+    } else {
+        tweets = JSON.parse(localStorage.getItem('tweets'));
+    }
+    return tweets;
+
 }
