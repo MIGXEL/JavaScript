@@ -54,10 +54,11 @@ function borrarTweet(e) {
 //Agregar tweet a Local Storage
 function agregarTweetLocalStorage(tweet) {
     let tweets;
-
+    //Obtenemos los tweets de LocalStorage
     tweets = obtenerTweetsLocalStorage();
-    console.log(tweets);
+    //Agregamos Tweet al arreglo de Tweets
     tweets.push(tweet);
+    //Agregamos los Tweets a LocalStorage
     localStorage.setItem('tweets', JSON.stringify(tweets));
 }
 
