@@ -61,7 +61,7 @@ Interfaz.prototype.mostrarError = function(mensaje, tipo) {
 
     setTimeout(function() {
         document.querySelector('.mensaje').remove();
-    }, 2000)
+    }, 3000)
 
 }
 
@@ -133,6 +133,7 @@ formulario.addEventListener('submit', function(e) {
         const cantidad = seguro.cotizarSeguro();
         //mostrar ele resultado
         interfaz.mostrarResultado(seguro, cantidad);
+        interfaz.mostrarError('Cotizando...', 'correcto');
     }
 })
 
