@@ -1,11 +1,13 @@
 body {
-    background: #56CCF2; 
-    background: -webkit-linear-gradient(to right, #2F80ED, #56CCF2);  
-    background: linear-gradient(to right, #2F80ED, #56CCF2); 
+    background: #56CCF2;
+    background: -webkit-linear-gradient(to right, #be2623, #0e3746);
+    background: linear-gradient(to right, #be2623, #0e3746);
 }
+
 .contenido {
     margin-top: 40px;
 }
+
 h1 {
     color: white;
     text-align: center;
@@ -23,9 +25,10 @@ form {
     text-align: center;
     margin: 0 auto;
     padding: 20px;
-    border: 1px solid #56CCF2; 
-    background: rgb(219, 246, 255); 
+    border: 1px solid #56CCF2;
+    background: rgb(219, 246, 255);
 }
-.lista li:last-child{
-    margin:0;
+
+.lista li:last-child {
+    margin: 0;
 }
