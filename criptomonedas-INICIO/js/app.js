@@ -15,7 +15,7 @@ formulario.addEventListener('submit', (e) => {
     const monedaSeleccionada = monedaSelect.options[monedaSelect.selectedIndex].value;
 
     const criptoMonedaSelect = document.getElementById('criptomoneda');
-    const criptoMonedaSeleccionada = monedaSelect.options[monedaSelect.selectedIndex].value;
+    const criptoMonedaSeleccionada = criptoMonedaSelect.options[criptoMonedaSelect.selectedIndex].value;
 
 
     //comprabar que los campos no esten vacios

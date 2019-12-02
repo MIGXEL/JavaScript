@@ -13,7 +13,6 @@ class API {
         const urlObtenerMonedas = await fetch(url);
         //Respuesta en json
         const monedas = await urlObtenerMonedas.json();
-        console.log(monedas);
 
         return {
             monedas
